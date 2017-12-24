@@ -1,14 +1,9 @@
-# web-docker-config-json
-Provides a config.json &lt;-> plain credentials bi-way in browser transform
+# Convert between docker registry credentials, config.json and kubernetes ImagePullSecrets live
 
-A frequent need when generating ImagePullSecrets for kubernetes, or passing in credentials to remote docker hosts, you need config.json.
+Hosted using github pages here: https://polyverse.github.io/docker-creds-converter/
 
-Back in the day, you'd pick it up from ~/.docker/config.json . With Credentials Helpers, this can get annoying real fast.
+Generating registry secrets for Kubernetes is cumbersome. Extracting creds or updating the secret is annoying. Generating config.json is painful. But we need to do it all the time!
 
-You do 
-```
-echo "$username:$password" | base64
-```
-But then you forget to ask for padding, and the token doesn't work.
+Just enter your registry credentials, and watch the config.json and your kubernetes yaml get populated live. It works both ways (or three ways). Edit any field and the others will reflect the updates. So post a registry secret in the yaml section, and watch the config.json as well as creds get populated.
 
 Ugh! No more. This tool will change your life!
