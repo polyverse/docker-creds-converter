@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Web-based docker config.json, and Kubernetes ImagePullSecret generator</title>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="docker-credentials.js"></script>
+  <script type="text/javascript" src="glue.js"></script>
+  <link rel="stylesheet" type="text/css"  href="style.css"/>
+</head>
+<body>
+  <h1><center>Web-based docker config.json, and Kubernetes ImagePullSecret generator</center></h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Plain Credentials</th>
+        <th>Config Json</th>
+        <th>ImagePullSecret</th>
+      </tr>
+    <thead>
+    <tbody>
+      <tr>
+        <td style="vertical-align: top;">
+          <table>
+            <thead>
+              <tr>
+                <th>Registry</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="credsrowsholder">
+            </tbody>
+          </table>
+          <input type="button" value="Add Credential" id="addcredrow"></input>
+        </td>
+        <td><textarea id="configjson" rows="25" cols="50"></textarea></td>
+        <td><textarea id="imagepullsecret" rows="25" cols="50"></textarea></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
